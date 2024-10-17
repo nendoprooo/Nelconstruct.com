@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: white;
+            color: orange;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+        }
+        p {
+            color: gray;
+        }
+        details {
+            color: gray;
+        }
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        #colorButton {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            padding: 10px;
+            background-color: orange;
+            color: black;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 25px;
+        }
+        /* Para pantallas pequeñas, como móviles */
+    @media (max-width: 600px) {
+        .column {
+            width: 100%;
+            padding: 10px;
+        }
+    }
+    </style>
+    <title>Nelconstruct SL</title>
+</head>
+<body>
+    <h1>Nelconstruct SL</h1>
+    <p>Que hacemos en Nelconstruct?</p>
+    <div class="row">
+        <div class="column" style="background-color:#aaaaaa00;">
+            <h2>Construcciones</h2>
+            <details>En nelconstruct SL construimos con precisión, exactitud y profesionalmente</details>
+        </div>
+        <div class="column" style="background-color:#bbbbbb00;">
+            <h2>Instalaciones</h2>
+            <details>
+                Instalamos aires acondicionados, domésticos e industriales
+            </details>
+        </div>
+        <div class="column" style="background-color:#cccccc00;">
+            <h2>Reformas</h2>
+            <details>Todo trabajo de construcción</details>
+        </div>
+    </div>
+    <h1>De donde somos?</h1>
+    <p>Nosotros somos una empresa de Barcelona. Nos desplazamos por toda Barcelona para construir, reformar, o instalar.</p>
+    <h1>Como contactar con nosotros?</h1>
+    <p>Fácil, puedes enviar mensaje por Gmail a "nelconstruc@gmail.com" o a "conninst8077@gmail.com" o llama al 662 370 470.</p>
+
+    <button id="colorButton">Cambiar color de fondo</button>
+
+    <script>
+        const button = document.getElementById('colorButton');
+        button.addEventListener('click', () => {
+            const body = document.body;
+            if (body.style.backgroundColor === 'black') {
+                body.style.backgroundColor = 'white';
+                body.style.color = 'orange';
+            } else {
+                body.style.backgroundColor = 'black';
+                body.style.color = 'orange';
+            }
+        });
+    </script>
+</body>
+</html>
